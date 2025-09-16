@@ -4,9 +4,9 @@ Ta repozitorij je namenjen dokumentiranju dobro pripravljenih pozivov (prompt) z
 
 NOTE: Promti se lahko obnašajo različno odvisno od načina uporabe vrste LLM modela in orodja, ki ga uporabljamo. 
 
-*Tipično bom uporabljal naslednja orodja:
+*Tipično bom uporabljal naslednja orodja:*
 
-**GPT besedilna orodja:
+**GPT besedilna orodja:**
 - [ChatGPT](https://chatgpt.com/),
 - [Gemini](https://gemini.google.com/),
 - [Claude](https://claude.ai/new),
@@ -17,15 +17,15 @@ NOTE: Promti se lahko obnašajo različno odvisno od načina uporabe vrste LLM m
 - [Perplexity](https://www.perplexity.ai/),
 - [NotebookLM](https://notebooklm.google.com/),
 
-**Grafična orodja - ustvarjanje slik:
+**Grafična orodja - ustvarjanje slik:**
 - [ComfyUI (lokalna postavitev)](https://www.comfy.org/),
 - [NanoBanana](https://nanobanana.ai/),
 
-**Video orodja - ustvarjanje videov:
+**Video orodja - ustvarjanje videov:**
 - [ComfyUI (lokalna postavitev)](https://www.comfy.org/),
 - [Veo3](https://veo3.ai/),
 
-**Pomembne povezave za razvoj AI:
+**Pomembne povezave za razvoj AI:**
 - [Jules](https://jules.google.com/task),
 - [Google AI Studio](https://aistudio.google.com/prompts/new_chat),
 - [HuggingFace](https://huggingface.co/),
