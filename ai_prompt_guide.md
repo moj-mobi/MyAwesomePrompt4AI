@@ -426,4 +426,4 @@ Uspešen prompt inženiring zahteva:
 
 ---
 
-*Dokument pripravljen na podlagi najboljših praks prompt inženiringa in praktičnih izkušenj z različnimi AI sistemi. Za dodatne informacije in podporo obiščite [vaš-prompt-engineering-vir.com]*
+*Dokument pripravljen na podlagi najboljših praks prompt inženiringa in praktičnih izkušenj z različnimi AI sistemi.*
