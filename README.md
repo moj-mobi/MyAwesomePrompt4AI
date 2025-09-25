@@ -23,7 +23,7 @@ NOTE: Promti se lahko obnašajo različno odvisno od načina uporabe vrste LLM m
 
 **Video orodja - ustvarjanje videov:**
 - [ComfyUI (lokalna postavitev)](https://www.comfy.org/),
-- [Veo3](https://veo3.ai/),
+- [SonoVid (prej Veo3)](https://sonovid.ai/),
 
 **Pomembne povezave za razvoj AI:**
 - [Jules](https://jules.google.com/task),
@@ -31,7 +31,23 @@ NOTE: Promti se lahko obnašajo različno odvisno od načina uporabe vrste LLM m
 - [HuggingFace](https://huggingface.co/),
 - [Kaggle](https://www.kaggle.com/models/google/vaultgemma).
 
-# To-Do
-- Pripravi strukturo prompt notebook-ov
+##Programiranje
+
+**Vibe programiranje**
+- [Replit](https://replit.com/)
+- [Lovable](https://lovable.dev/)
+
+**Orodja za AI programerje**
+- [GitHUB MCP Server](https://github.com/mcp/github/github-mcp-server)
+- [Spec KIT](https://github.com/github/spec-kit?tab=readme-ov-file)
+- [LangChain4j](https://docs.langchain4j.dev/)
+- [Obsidian MD editor](https://obsidian.md/)
+- [Apache Airflow](https://airflow.apache.org/)
+- [Microsoft CCodeBERT](https://github.com/microsoft/CodeBERT)
+- [Google Jules](https://jules.google.com/task)
+- [Cursor](https://cursor.com/home)
+- [BrowserAct](https://www.browseract.com/)
+
+
 
 
