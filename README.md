@@ -34,7 +34,7 @@ Tu si lahko preberite [vodnik za pisanje AI promptov](ai_prompt_guide.md)
 - :sparkling_heart:[HuggingFace](https://huggingface.co/),
 - :yellow_heart:[Kaggle](https://www.kaggle.com/models/google/vaultgemma).
 
-##Programiranje
+## Programiranje
 
 **Vibe programiranje**
 - :heart:[Replit](https://replit.com/)
