@@ -19,6 +19,7 @@ Tu si lahko preberite [vodnik za pisanje AI promptov](ai_prompt_guide.md)
 - :sparkling_heart:[AnythingLLM](https://anythingllm.com/),
 - :blue_heart:[Perplexity](https://www.perplexity.ai/),
 - :yellow_heart:[NotebookLM](https://notebooklm.google.com/),
+- :sparkling_heart:[Gemini-cli](https://github.com/google-gemini/gemini-cli),
 
 **Grafična orodja - ustvarjanje slik:**
 - :sparkling_heart:[ComfyUI (lokalna postavitev)](https://www.comfy.org/),
@@ -51,7 +52,7 @@ Tu si lahko preberite [vodnik za pisanje AI promptov](ai_prompt_guide.md)
 - [Cursor](https://cursor.com/home)
 - [BrowserAct](https://www.browseract.com/)
 - [Jupyter](https://jupyter.org/install)
-
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 
 
