@@ -2,7 +2,8 @@
 
 Ta repozitorij je namenjen dokumentiranju dobro pripravljenih pozivov (prompt) za uporabo v AI modelih in pri gradnji AI agentov (agentic prompt).
 
-NOTE: Promti se lahko obnašajo različno odvisno od načina uporabe in vrste LLM modela ter orodja, ki se uporablja. \n\n
+NOTE: Promti se lahko obnašajo različno odvisno od načina uporabe in vrste LLM modela ter orodja, ki se uporablja.
+
 Tu si lahko preberite [vodnik za pisanje AI promptov](ai_prompt_guide.md)
 
 ## GPAI orodja, platforme in agenti
