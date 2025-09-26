@@ -50,6 +50,7 @@ Tu si lahko preberite [vodnik za pisanje AI promptov](ai_prompt_guide.md)
 - [Google Jules](https://jules.google.com/task)
 - [Cursor](https://cursor.com/home)
 - [BrowserAct](https://www.browseract.com/)
+- [Jupyter](https://jupyter.org/install)
 
 
 
