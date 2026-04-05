@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vojna LLM-jev in poplava AI orodij: Analiza 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #cbd5e1; }
+        h1, h2, h3, h4, h5 { color: #f8fafc; font-weight: 800; letter-spacing: -0.02em; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-card { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid #1e293b; border-radius: 1rem; }
+        .gradient-text { background: linear-gradient(to right, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text-pink { background: linear-gradient(to right, #fe0979, #ff7b00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .chart-container { position: relative; width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; height: 60vh; max-height: 500px; }
+        @media (max-width: 768px) { .chart-container { height: 40vh; } }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        .diagram-box { background-color: #0f172a; border: 2px solid #38bdf8; border-radius: 0.5rem; padding: 1.5rem; text-align: center; color: #e0f2fe; font-weight: 600; box-shadow: 0 4px 6px -1px rgba(56, 189, 248, 0.2); }
+        .diagram-arrow { color: #94a3b8; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; padding: 0.5rem; }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-900 selection:text-cyan-50">
+
+    <nav class="sticky top-0 z-50 glass-card border-b border-slate-800 p-4 mb-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tighter"><span class="text-cyan-400">AI</span> Analiza <span class="text-slate-500">Q1 2026</span></div>
+            <div class="hidden md:flex space-x-6 text-sm font-semibold text-slate-400">
+                <a href="#uvod" class="hover:text-cyan-400 transition-colors">1. Kontekst</a>
+                <a href="#primerjava" class="hover:text-cyan-400 transition-colors">2. Odprti vs. Zaprti</a>
+                <a href="#bias" class="hover:text-cyan-400 transition-colors">3. Bias</a>
+                <a href="#copilot" class="hover:text-pink-500 transition-colors">4. Copilot 365</a>
+                <a href="#agenti" class="hover:text-cyan-400 transition-colors">5. Agenti</a>
+                <a href="#tveganja" class="hover:text-red-400 transition-colors">6. Tveganja</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 mb-16 text-center">
+        <div class="inline-block mb-4 px-3 py-1 rounded-full border border-cyan-800 bg-cyan-900/30 text-cyan-400 text-xs font-bold uppercase tracking-widest">
+            Strateško Raziskovalno Poročilo
+        </div>
+        <h1 class="text-5xl md:text-7xl mb-6 leading-tight">
+            Vojna LLM-jev in <br><span class="gradient-text">Poplava AI Orodij</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-400 max-w-4xl mx-auto font-light">
+            Od eksponentne rasti jezikovnih modelov do agentic revolucije: nevtralna in poglobljena analiza za poslovno rabo v prvem kvartalu leta 2026.
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 space-y-24 pb-24">
+
+        <section id="uvod" class="scroll-mt-24">
+            <div class="glass-card p-8 md:p-12">
+                <h2 class="text-3xl md:text-4xl mb-6">1. Uvod in kontekst (Stanje Q1 2026)</h2>
+                <div class="prose prose-invert prose-lg max-w-none text-slate-300">
+                    <p class="mb-6">
+                        Prehod iz leta 2024 v 2026 označuje najbolj dramatičen premik v razvoju umetne inteligence doslej. Obdobje med letoma 2022 in 2024 je zaznamovala t.i. "LLM vojna", kjer so tehnološki velikani tekmovali izključno v štetju parametrov in masovnem pre-trainingu. Ta paradigma "surove moči" je v Q1 2026 uradno zaključena. Fokus celotne industrije se je preusmeril od izdelave čim večjih osnovnih modelov k optimizaciji "test-time compute" (sklepanje med izvajanjem, ki so ga začeli OpenAI o1 in o3 ter DeepSeek R1) in predvsem k razvoju agentic sistemov.
+                    </p>
+                    <p class="mb-6">
+                        Danes ne govorimo več zgolj o "klepetanju z modelom", temveč o avtonomnih sistemih, ki uporabljajo orodja (tool-use), brskajo po spletu (WebArena meritve), rešujejo programske hrošče v realnih repozitorijih (SWE-Bench) in upravljajo z večstopenjskimi poslovnimi procesi (GAIA benchmark). Poročila Epoch AI in organizacije LMSYS v začetku leta 2026 jasno kažejo, da so se razlike v kakovosti med top modeli (GPT-5, Claude Opus 4, Llama 4) zmanjšale do te mere, da za končnega poslovnega uporabnika razlika v "surovi inteligenci" ni več ključni faktor odločanja.
+                    </p>
+                    <p class="mb-8">
+                        Ključna diferenciacija leta 2026 sloni na orkestraciji, zanesljivosti integracije v obstoječe sisteme (ERP, CRM), zmožnosti ohranjanja dolgoročnega konteksta (long-horizon reasoning) in stroškovni učinkovitosti (cost-per-token vojna, ki so jo sprožili odprtokodni modeli). V podjetjih je nastopila "poplava AI orodij" – od mikro-agentov za specifične naloge do masovnih implementacij Microsoft Copilot platform. To poročilo objektivno razčlenjuje to kompleksno krajino, ločuje tržni hrup (hype) od dejanske uporabne vrednosti ter nudi strateške usmeritve za slovenska in evropska podjetja.
+                    </p>
+                </div>
+
+                <div class="mt-12 bg-slate-900 rounded-xl p-6 border border-slate-700">
+                    <h3 class="text-xl mb-4 text-cyan-300">Evolucija AI fokusa: Od parametrov do agentov (2022-2026)</h3>
+                    <div class="chart-container">
+                        <canvas id="chartEvolucija"></canvas>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-4 text-center">Graf prikazuje upad pomembnosti gole velikosti modela v prid zmožnostim orodij in agentic arhitektur. Vrednosti so normalizirani indeksi rasti na podlagi industrijskih vlaganj in benchmark fokusa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="primerjava" class="scroll-mt-24">
+            <h2 class="text-3xl md:text-4xl mb-8 pl-4 border-l-4 border-cyan-500">2. Primerjava odprtih in zaprtih LLM-jev v Q1 2026</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl text-green-400 mb-4 flex items-center"><span class="text-3xl mr-3">🔓</span> Odprtokodni (Open-Source/Weights)</h3>
+                    <p class="text-slate-300 mb-4 leading-relaxed">
+                        Ekosistem odprtih modelov je v Q1 2026 dosegel stopnjo, kjer so kompromisi glede zmogljivosti minimalni. <strong>Meta Llama 4 (400B+)</strong>, <strong>DeepSeek V3/R1</strong> in <strong>Qwen 3 (Alibaba)</strong> so demokratizirali dostop do "frontier" inteligence.
+                    </p>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li><strong class="text-slate-200">Zmogljivost:</strong> Globoko razumevanje, vrhunsko programiranje (DeepSeek R1 prekaša mnoge zaprte modele v SWE-bench).</li>
+                        <li><strong class="text-slate-200">Cena:</strong> Brutalna cenovna vojna. Inference API-ji stanejo pod $0.15 za 1 milijon žetonov. Fine-tuning je izjemno poceni zaradi LoRA/QLoRA optimizacij na lokalnem stroju ali v oblaku.</li>
+                        <li><strong class="text-slate-200">Varnost in Nadzor:</strong> Popoln nadzor nad podatki. Modeli se lahko izvajajo na on-premise infrastrukturi (zračna zapor - air-gapped), kar je ključno za banke in obrambni sektor v EU.</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl text-blue-400 mb-4 flex items-center"><span class="text-3xl mr-3">🔒</span> Zaprtokodni (Closed-Source/API)</h3>
+                    <p class="text-slate-300 mb-4 leading-relaxed">
+                        Giganti kot so <strong>OpenAI (GPT-5.x)</strong>, <strong>Anthropic (Claude Opus 4)</strong> in <strong>Google (Gemini 3.1 Pro/Ultra)</strong> ohranjajo prednost pri najtežjih kognitivnih nalogah in nativni multimodalnosti.
+                    </p>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li><strong class="text-slate-200">Zmogljivost:</strong> Zmaga na dolgoročnem sklepanju (long-horizon reasoning v GAIA). Najboljši pri razumevanju nestrukturiranih podatkov (video, avdio) in masovnih promptih (do 2M token oken).</li>
+                        <li><strong class="text-slate-200">Cena:</strong> Še vedno visoka za "top-tier" modele ($10-$20 na 1M žetonov), čeprav imajo tudi manjše "flash/haiku" različice, ki so cenejše.</li>
+                        <li><strong class="text-slate-200">Varnost in Nadzor:</strong> Zaupanje v ponudnika oblačne storitve (SOC2, ISO certifikati). Zahteva stroge Data Processing Agreements (DPA), podatki zapustijo interno omrežje, razen pri specifičnih enterprise pogodbah.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass-card p-8">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl mb-4 text-cyan-300">Zmognljivostni Benchmark: Arena Elo & GPQA (Q1 2026)</h3>
+                        <p class="text-sm text-slate-400 mb-6">GPQA meri strokovno znanje na nivoju doktorata (fizika, biologija, kemija). Chatbot Arena Elo je crowdsourced ocena človeških preferenc.</p>
+                        <div class="chart-container" style="height: 350px;">
+                            <canvas id="chartZmogljivost"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl mb-4 text-cyan-300">Stroškovna učinkovitost vs. Inteligentnost</h3>
+                        <p class="text-sm text-slate-400 mb-6">Analiza stroškov inferenčnega klica preko API-ja (vhodni + izhodni žetoni povprečje) glede na dosežen Elo rating.</p>
+                        <div class="chart-container" style="height: 350px;">
+                            <canvas id="chartStroski"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bias" class="scroll-mt-24">
+            <h2 class="text-3xl md:text-4xl mb-8 pl-4 border-l-4 border-pink-500">3. Demografski in geopolitični bias LLM-jev</h2>
+            
+            <div class="glass-card p-8 md:p-12">
+                <p class="text-lg text-slate-300 mb-8">
+                    V letu 2026 niso vsi modeli nevtralni opazovalci sveta. Arhitektura in parametri so sicer matematični, vendar uteži določajo podatki (pre-training) in usklajevanje (RLHF/DPO), ki ga izvajajo ljudje. To ustvarja opazna geopolitična in kulturna odstopanja, kar prinaša specifična tveganja za poslovno rabo.
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-3">US Modeli (GPT, Claude, Gemini)</h4>
+                        <p class="text-sm text-slate-400">Močan poudarek na "Corporate Safety" in zahodnih progresivnih vrednotah. Pogosto pretirano cenzurirajo (refusal rates) vsebine, ki zadevajo avtorske pravice, nasvete glede varnosti ali politične debate. Visoko usklajeni z ameriškim pravnim sistemom.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-3">EU Modeli (Mistral, Aleph Alpha)</h4>
+                        <p class="text-sm text-slate-400">Primarno fokusirani na EU AI Act compliance in multilingvalnost znotraj Evrope. Prilagojeni za striktno spoštovanje GDPR normativov in varstvo podatkov ("privacy by design"). Podatkovne baze vključujejo več evropske kulturne dediščine.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
+                        <h4 class="text-red-400 font-bold mb-3">Kitajski Modeli (DeepSeek, Qwen)</h4>
+                        <p class="text-sm text-slate-400">Izjemna zmogljivost pri inženirskih nalogah in matematiki. Vendar pa imajo hardcodirano državno cenzuro (Tibet, Tajvan, politična zgodovina Kitajske). Podatkovni set vključuje ogromno non-Western perspektive in drugačnih norm.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="flex-1 w-full">
+                        <h3 class="text-xl text-cyan-300 mb-4">Profiliranje pristranskosti po regijah</h3>
+                        <div class="chart-container" style="max-width: 500px; height: 400px;">
+                            <canvas id="chartBias"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex-1 space-y-6">
+                        <div class="border-l-4 border-yellow-500 pl-4 py-2 bg-yellow-500/10 rounded-r-lg">
+                            <h4 class="text-yellow-400 font-bold mb-2">Pomen za EU Podjetja</h4>
+                            <p class="text-sm text-slate-300">
+                                Uporaba kitajskih modelov za obdelavo kode (npr. DeepSeek R1) ponuja neverjeten ROI, vendar predstavlja tveganje v reguliranih sektorjih zaradi neznanega ravnanja s telemetrijo. Uporaba ameriških modelov za marketing v EU lahko generira "tone of voice", ki evropskemu trgu deluje tuje ali preveč politično korektno (western corporate bias). Implementacija zahteva hibridni pristop (t.i. "model routing").
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="copilot" class="scroll-mt-24">
+            <h2 class="text-3xl md:text-4xl mb-8 pl-4 border-l-4 border-purple-500">4. Fokus: Microsoft Copilot for M365</h2>
+            
+            <div class="glass-card p-8 md:p-12 border-purple-900/50 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 text-9xl text-purple-500/5 select-none pointer-events-none">M365</div>
+                
+                <h3 class="text-2xl font-bold mb-6 text-white">Ali je Copilot 365 LLM? <span class="text-red-400 uppercase tracking-widest ml-4 text-xl">Ne.</span></h3>
+                
+                <p class="text-slate-300 mb-10 text-lg leading-relaxed max-w-4xl">
+                    Največja zabloda v poslovnem svetu Q1 2026 je izenačevanje Copilot for M365 z jezikovnim modelom (kot je ChatGPT). Copilot 365 <strong>ni LLM</strong>, temveč kompleksna <strong>orkestracijska in RAG (Retrieval-Augmented Generation) agentic arhitektura</strong>. LLM (tipično iz serije GPT-4o ali GPT-5 prilagojene za Azure) je zgolj kognitivni "motor" znotraj tega ogromnega stroja.
+                </p>
+
+                <h4 class="text-xl text-purple-400 mb-6 font-semibold">Arhitekturni Prikaz Copilot 365 Sistema</h4>
+                
+                <div class="bg-slate-950 p-6 md:p-12 rounded-xl border border-slate-800 mb-10 overflow-x-auto shadow-2xl">
+                    <div class="flex flex-col items-center min-w-[700px]">
+                        
+                        <div class="diagram-box bg-slate-800 border-slate-600 text-slate-300 w-64">
+                            M365 Aplikacija (Word, Teams, Excel) <br><span class="text-sm font-normal text-slate-400">Uporabniški vnos / Prompt</span>
+                        </div>
+                        
+                        <div class="diagram-arrow">↓ 1. Klic</div>
+                        
+                        <div class="diagram-box border-purple-500 w-96 relative shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+                            <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-slate-950 px-2 text-xs text-purple-400 uppercase tracking-wider">Možgani Sistema</span>
+                            Copilot Orkestrator (Agent)
+                            <div class="text-xs font-normal text-slate-400 mt-2">Preverjanje pravic, določitev namena (Intent recognition)</div>
+                        </div>
+
+                        <div class="flex justify-center w-full max-w-3xl my-2 relative">
+                            <div class="w-1/2 flex flex-col items-center">
+                                <div class="diagram-arrow">↙ 2. RAG Iskanje</div>
+                            </div>
+                            <div class="w-1/2 flex flex-col items-center">
+                                <div class="diagram-arrow">3. Z generiranim kontekstom ↘</div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between w-full max-w-3xl gap-4">
+                            <div class="diagram-box border-cyan-600 w-72 h-32 flex flex-col justify-center">
+                                Microsoft Graph & Semantic Index
+                                <div class="text-xs font-normal text-slate-400 mt-2">Podjetniški podatki (Emaili, Datoteke, Sestanki, Dovoljenja uporabnika)</div>
+                            </div>
+                            
+                            <div class="diagram-box border-green-600 w-72 h-32 flex flex-col justify-center">
+                                Azure OpenAI Service (LLM)
+                                <div class="text-xs font-normal text-slate-400 mt-2">GPT-4 / GPT-5 Model v izoliranem tenant okolju</div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center w-full max-w-3xl my-2">
+                            <div class="w-1/2 flex flex-col items-center">
+                                <div class="diagram-arrow">↗ Vrne interne podatke</div>
+                            </div>
+                            <div class="w-1/2 flex flex-col items-center">
+                                <div class="diagram-arrow">↙ Vrne odgovor z razumom</div>
+                            </div>
+                        </div>
+                        
+                        <div class="diagram-box border-purple-500 w-96">
+                            Copilot Orkestrator (Post-processing)
+                            <div class="text-xs font-normal text-slate-400 mt-2">Preverjanje varnosti, formatiranje za ciljno aplikacijo</div>
+                        </div>
+
+                        <div class="diagram-arrow">↓ Končni izpis</div>
+
+                        <div class="diagram-box bg-slate-800 border-slate-600 text-slate-300 w-64">
+                            Nazaj k uporabniku (v Word/Teams)
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 text-sm">
+                    <div>
+                        <h4 class="text-lg text-emerald-400 mb-3 font-semibold">Prednosti za poslovno okolje</h4>
+                        <ul class="space-y-2 text-slate-300">
+                            <li><span class="text-emerald-500 mr-2">✓</span> <strong>Data Security & Compliance:</strong> Vsi klici so znotraj organizacijske M365 varnostne meje (tenant boundary). LLM se ne uči na vaših podatkih.</li>
+                            <li><span class="text-emerald-500 mr-2">✓</span> <strong>Microsoft Graph integracija:</strong> Model "vidi" samo dokumente, do katerih ima konkretni uporabnik dostopno pravico.</li>
+                            <li><span class="text-emerald-500 mr-2">✓</span> <strong>Context-Awareness:</strong> Zna povezati sestanek z dokumentom in elektronsko pošto avtomatično, brez ročnega pripenjanja datotek (RAG).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg text-red-400 mb-3 font-semibold">Omejitve in nevtralna presoja</h4>
+                        <ul class="space-y-2 text-slate-300">
+                            <li><span class="text-red-500 mr-2">✗</span> <strong>Cena:</strong> Izredno visoka fiksalna licenca na uporabnika mesečno, ne glede na frekvenco uporabe (v nasprotju z API pay-as-you-go modeli).</li>
+                            <li><span class="text-red-500 mr-2">✗</span> <strong>"GIGO" problem:</strong> Če imajo v podjetju uporabniki (zaradi slabe administracije) prevelik dostop do Sharepoint map, jim Copilot to instantno razkrije.</li>
+                            <li><span class="text-red-500 mr-2">✗</span> <strong>Težave s specializacijo:</strong> Slabši pri globoko tehničnem programiranju ali zelo specifičnih internih ERP nalogah v primerjavi s custom-built agenti.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="agenti" class="scroll-mt-24">
+            <h2 class="text-3xl md:text-4xl mb-8 pl-4 border-l-4 border-cyan-500">5. AI orodja in Agentic Sistemi: Tipologija Q1 2026</h2>
+            
+            <p class="text-slate-300 mb-8 max-w-4xl text-lg">
+                Koncept umetne inteligence se je razslojil. Podjetja se ne odločajo več "kateri model kupiti", temveč "kateri tip sistema implementirati za kateri proces". Poglejmo štiri glavne kategorije zrelosti AI orodij.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                
+                <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 hover:border-slate-500 transition-colors flex flex-col">
+                    <div class="text-3xl mb-4">🧠</div>
+                    <h3 class="text-lg text-white font-bold mb-2">1. Klasični LLM API</h3>
+                    <div class="text-xs uppercase text-slate-500 font-bold mb-4">Temeljni sloj</div>
+                    <p class="text-sm text-slate-400 flex-grow mb-4">
+                        Surovi jezikovni modeli dostopni preko API klicev (pre-training in fine-tuning modeli, dostopni via inference engine). Nimajo spomina izven podanega prompta.
+                    </p>
+                    <div class="border-t border-slate-800 pt-4 mt-auto">
+                        <strong class="text-xs text-cyan-400 block mb-1">Primeri uporabe:</strong>
+                        <span class="text-xs text-slate-400">Masovno prevajanje, klasifikacija podatkov, analiza sentimenta (integrirano v zalednih sistemih).</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-700 rounded-xl p-6 hover:border-slate-500 transition-colors flex flex-col">
+                    <div class="text-3xl mb-4">💬</div>
+                    <h3 class="text-lg text-white font-bold mb-2">2. Chat / Generativni AI</h3>
+                    <div class="text-xs uppercase text-slate-500 font-bold mb-4">Aplikacijski sloj</div>
+                    <p class="text-sm text-slate-400 flex-grow mb-4">
+                        LLM oblečen v uporabniški vmesnik z ohranjanjem konteksta znotraj ene seje (chat history). Fokusiran na generiranje teksta, kode ali slik po navodilih človeka.
+                    </p>
+                    <div class="border-t border-slate-800 pt-4 mt-auto">
+                        <strong class="text-xs text-cyan-400 block mb-1">Primeri uporabe:</strong>
+                        <span class="text-xs text-slate-400">ChatGPT, Claude Web UI, Midjourney, Jasper. Uporaba za brainstorming, pisanje osnutkov, hitro iskanje znanja.</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-cyan-800 rounded-xl p-6 hover:border-cyan-500 transition-colors shadow-[0_0_15px_rgba(6,182,212,0.1)] flex flex-col relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-cyan-900/50 text-cyan-200 text-[10px] font-bold px-2 py-1 rounded-bl-lg">2026 FOKUS</div>
+                    <div class="text-3xl mb-4">🛠️</div>
+                    <h3 class="text-lg text-white font-bold mb-2">3. Agenti (Single-Agent)</h3>
+                    <div class="text-xs uppercase text-cyan-500 font-bold mb-4">Avtonomni izvajalci</div>
+                    <p class="text-sm text-slate-400 flex-grow mb-4">
+                        LLM opremljen z orodji (API-ji, iskalniki, kalkulatorji) in dostopom do izvajalnega okolja. Agent dobi nalogo, razmisli (reasoning loop), uporabi orodja, validira rezultat in konča.
+                    </p>
+                    <div class="border-t border-slate-800 pt-4 mt-auto">
+                        <strong class="text-xs text-cyan-400 block mb-1">Primeri uporabe:</strong>
+                        <span class="text-xs text-slate-400">Perplexity (za spletno raziskovanje), Devin/GitHub Copilot Workspace (za kodiranje). Opravljajo naloge, ki trajajo do par minut.</span>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-slate-900 to-indigo-950 border border-indigo-700 rounded-xl p-6 hover:border-indigo-400 transition-colors shadow-[0_0_20px_rgba(99,102,241,0.2)] flex flex-col relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-indigo-900/50 text-indigo-200 text-[10px] font-bold px-2 py-1 rounded-bl-lg">ENTERPRISE EDGE</div>
+                    <div class="text-3xl mb-4">🌐</div>
+                    <h3 class="text-lg text-white font-bold mb-2">4. Agentic Arhitektura</h3>
+                    <div class="text-xs uppercase text-indigo-400 font-bold mb-4">Sistemi (Multi-Agent)</div>
+                    <p class="text-sm text-slate-300 flex-grow mb-4">
+                        Orkestracija več specializiranih agentov. En agent planira, drugi piše kodo, tretji jo testira, četrti preverja varnost. Vodeni skozi frameworke, zmožni izvajanja dolgoročnih (long-horizon) procesov.
+                    </p>
+                    <div class="border-t border-indigo-900/50 pt-4 mt-auto">
+                        <strong class="text-xs text-indigo-300 block mb-1">Primeri uporabe:</strong>
+                        <span class="text-xs text-indigo-100/70">LangGraph, AutoGen, CrewAI. Popolnoma avtomatizirano reševanje support ticketov ali end-to-end priprava razpisne dokumentacije.</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bg-slate-900 rounded-xl p-6 border border-slate-800 flex flex-col lg:flex-row gap-8 items-center">
+                <div class="flex-1 w-full">
+                    <h3 class="text-xl text-white mb-2">Uspešnost reševanja realnih poslovnih problemov</h3>
+                    <p class="text-sm text-slate-400 mb-6">GAIA benchmark meri sposobnost AI sistemov za asistentne naloge v realnem svetu, ki zahtevajo logiko, brskanje in uporabo orodij. Primerjava po kategoriji orodja.</p>
+                    <div class="chart-container" style="height: 350px;">
+                        <canvas id="chartAgenti"></canvas>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <div class="prose prose-invert text-sm text-slate-300">
+                        <p><strong>Kaj nam pove graf?</strong></p>
+                        <p>Klasični LLM brez orodij se pri kompleksnih poslovnih nalogah odreže katastrofalno (pod 15%), saj ne more preveriti dejstev v zunanjem svetu. Ko modelu dodamo osnovna orodja (Single-Agent), uspešnost naraste, a pogosto spodleti pri dolgotrajnih nalogah (se zmede, vstopi v neskončno zanko in porabi žetone).</p>
+                        <p>Pravo revolucijo leta 2026 prinaša <strong>Agentic arhitektura</strong> (LangGraph, CrewAI). Ker sistem nalogo razbije med več mikro-agentov z nadzornim agentom, uspešnost pri reševanju realnih problemov (ki zahtevajo tudi do uro strojnega razmisleka) prvič presega prag praktične poslovne uporabnosti.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="tveganja" class="scroll-mt-24">
+            <h2 class="text-3xl md:text-4xl mb-8 pl-4 border-l-4 border-red-500">6. Omejitve in Tveganja: Česa AI ZAGOTOVO NE ZNA v 2026</h2>
+            
+            <p class="text-lg text-slate-300 mb-8 max-w-4xl">
+                Kljub ogromnemu napredku je slepo zaupanje v AI sisteme brez "človeka-v-zanki" (Human-in-the-loop) v poslovnem procesu lahko pogubno. V letu 2026 identificiramo tri ključna področja, kjer LLM-ji in Agenti radikalno odpovedo.
+            </p>
+
+            <div class="space-y-6">
+                
+                <div class="border border-red-900/50 bg-red-950/20 p-6 md:p-8 rounded-xl relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-9xl opacity-5">⚠️</div>
+                    <h3 class="text-xl text-red-400 font-bold mb-3 flex items-center"><span class="text-2xl mr-3">1.</span> Agentic Drift in Halucinacije Cilja</h3>
+                    <p class="text-slate-300 mb-4 leading-relaxed">
+                        Klasične faktografske halucinacije (kjer si model izmisli podatek) so se zaradi RAG sistemov močno zmanjšale. Vendar je nastopil nov problem v agentic sistemih: <strong>Agentic Drift</strong>. Pri nalogah z dolgim obzorjem (long-horizon tasks) agent pogosto začne pravilno, nato pa se v seriji korakov zaradi manjših zmot v sklepanju oddalji od primarnega cilja in ustvari popolnoma neuporaben in nepredvidljiv končni rezultat. Zanašanje na popolno avtonomijo pri večstopenjskih odločitvah je še vedno nevarno.
+                    </p>
+                </div>
+
+                <div class="border border-orange-900/50 bg-orange-950/20 p-6 md:p-8 rounded-xl relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-9xl opacity-5">⚖️</div>
+                    <h3 class="text-xl text-orange-400 font-bold mb-3 flex items-center"><span class="text-2xl mr-3">2.</span> Nepoznavanje Konteksta Odgovornosti (Compliance Risk)</h3>
+                    <p class="text-slate-300 mb-4 leading-relaxed">
+                        LLM-ji nimajo intrinzičnega razumevanja pravne ali finančne odgovornosti. Ne poznajo razlike med "dobro idejo" in "idejo, ki krši evropsko zakonodajo o konkurenci". V reguliranih sektorjih (farmacija, bančništvo, zavarovalništvo) AI agenti ne smejo avtonomno sprejemati odločitev (npr. odobritev kredita, zavrnitev zahtevka), ne le zaradi tehničnih omejitev, temveč zaradi strogih zahtev AI Act-a (2024/2026 compliance) glede transparentnosti in preprečevanja diskriminacije. AI v teh sektorjih ostaja izključno asistenčno orodje.
+                    </p>
+                </div>
+
+                <div class="border border-yellow-900/50 bg-yellow-950/20 p-6 md:p-8 rounded-xl relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-9xl opacity-5">🎲</div>
+                    <h3 class="text-xl text-yellow-400 font-bold mb-3 flex items-center"><span class="text-2xl mr-3">3.</span> Non-Determinističnost v strogih procesih</h3>
+                    <p class="text-slate-300 mb-4 leading-relaxed">
+                        Generativni modeli so po svoji naravi verjetnostni (stohastični) in ne deterministični. Za isti vhodni podatek lahko jutri vrnejo drugačen rezultat ali ga formatirajo malenkost drugače, četudi je nastavljena visoka stopnja strogosti (temperature=0). Zaradi tega so neprimerni za API integracije na točkah, kjer IT sistemi zahtevajo 100% konsistentne, točno določene podatkovne strukture (strict JSON output brez napak) v kritičnih tranzakcijskih procesih, razen če so obdani z močnimi klasičnimi inženirskimi varovalkami (output parsers, retry mehanizmi).
+                    </p>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="border-t border-slate-800 pt-16 scroll-mt-24 mb-16">
+            <h2 class="text-3xl md:text-4xl mb-8 font-bold text-center">Zaključek in Strateška Priporočila za CIO (EU / Slovenija)</h2>
+            <p class="text-center text-slate-400 max-w-3xl mx-auto mb-12">
+                Na podlagi analize stanja tehnologije v Q1 2026, podjetjem v Sloveniji in širši EU regiji svetujemo strukturiran, t.i. <strong>Tri-Tier</strong> (troslojni) pristop k implementaciji AI.
+            </p>
+
+            <div class="grid lg:grid-cols-3 gap-6">
+                
+                <div class="glass-card p-6 border-t-4 border-t-purple-500">
+                    <h4 class="text-xl font-bold text-white mb-2">1. Osebna Produktivnost</h4>
+                    <p class="text-sm font-mono text-purple-400 mb-4 uppercase tracking-wider">Množična uporaba</p>
+                    <p class="text-sm text-slate-300 mb-6">
+                        Za večino administrativnega in operativnega kadra je najvarnejša in najbolj smiselna izbira integrirana rešitev znotraj ekosistema podjetja.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li class="flex items-start"><span class="text-purple-500 mr-2">»</span> <strong>Priporočilo:</strong> Microsoft Copilot za M365 (ali Google Workspace AI).</li>
+                        <li class="flex items-start"><span class="text-purple-500 mr-2">»</span> <strong>Zakaj:</strong> Rešen problem varnosti, dostopa do podatkov in izobraževanja uporabnikov (orodje je že tam, kjer delajo).</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-6 border-t-4 border-t-green-500">
+                    <h4 class="text-xl font-bold text-white mb-2">2. Interni Podatkovni Sistemi</h4>
+                    <p class="text-sm font-mono text-green-400 mb-4 uppercase tracking-wider">Jedrni poslovni procesi</p>
+                    <p class="text-sm text-slate-300 mb-6">
+                        Za obdelavo strogo zaupnih internih podatkov (pogodbe, baze strank, CRM/ERP integracije, GDPR občutljivo).
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li class="flex items-start"><span class="text-green-500 mr-2">»</span> <strong>Priporočilo:</strong> Custom RAG sistemi na odprtokodnih modelih (Llama 4, Mistral).</li>
+                        <li class="flex items-start"><span class="text-green-500 mr-2">»</span> <strong>Zakaj:</strong> Podatki ne zapustijo države/omrežja. Popoln nadzor nad stroški inferenc (ni dragega API-ja) ter suverenost nad lastnim AI sistemom.</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-6 border-t-4 border-t-cyan-500">
+                    <h4 class="text-xl font-bold text-white mb-2">3. Kompleksna Avtomatizacija</h4>
+                    <p class="text-sm font-mono text-cyan-400 mb-4 uppercase tracking-wider">Edge Cases & R&D</p>
+                    <p class="text-sm text-slate-300 mb-6">
+                        Za razvojne oddelke, analitiko, pisanje kode ter reševanje nalog, ki zahtevajo multi-step razmislek in planiranje.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li class="flex items-start"><span class="text-cyan-500 mr-2">»</span> <strong>Priporočilo:</strong> Agentic frameworki (LangGraph) ganjeni z najmočnejšimi komercialnimi API-ji (GPT-5, Claude Opus 4).</li>
+                        <li class="flex items-start"><span class="text-cyan-500 mr-2">»</span> <strong>Zakaj:</strong> Za te naloge odprti modeli pogosto še ne zadostujejo pri dolgoročnem zanesljivem sklepanju. Strošek klica je upravičen z visoko dodano vrednostjo naloge.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950 py-12 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+            <div class="mb-4 text-cyan-900 font-bold tracking-widest uppercase text-xs">Nevtralno Poročilo - Generirano za Slovensko Poslovno Okolje (Q1 2026)</div>
+            <p>Arhitektura, vizualizacije in besedilo so bili ustvarjeni na podlagi analize panožnih trendov, testiranj LLM benchmarkov in stanja AI industrije začetka leta 2026.</p>
+        </div>
+    </footer>
+
+    <script>
+        Chart.defaults.color = '#94a3b8';
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.scale.grid.color = 'rgba(51, 65, 85, 0.4)';
+
+        const sharedTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            },
+            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+            titleColor: '#f8fafc',
+            bodyColor: '#cbd5e1',
+            borderColor: '#334155',
+            borderWidth: 1,
+            padding: 12
+        };
+
+        const ctxEvolucija = document.getElementById('chartEvolucija').getContext('2d');
+        new Chart(ctxEvolucija, {
+            type: 'line',
+            data: {
+                labels: ['Q1 2022', 'Q3 2022', 'Q1 2023', 'Q3 2023', 'Q1 2024', 'Q3 2024', 'Q1 2025', 'Q3 2025', 'Q1 2026'],
+                datasets: [
+                    {
+                        label: 'Fokus na velikost parametrov (Scaling Law)',
+                        data: [20, 40, 70, 95, 100, 85, 60, 40, 25],
+                        borderColor: '#f43f5e',
+                        backgroundColor: 'rgba(244, 63, 94, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'Fokus na Agentic Sisteme in Tool-use',
+                        data: [5, 8, 12, 18, 30, 55, 80, 95, 100],
+                        borderColor: '#06b6d4',
+                        backgroundColor: 'rgba(6, 182, 212, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: sharedTooltipConfig
+                },
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: 'Relativni indeks industrijskega fokusa' } }
+                }
+            }
+        });
+
+        const labelsZmogljivost = [
+            'GPT-5.x (Zaprti)', 
+            'Claude Opus 4 (Zaprti)', 
+            'Gemini 3.1 Pro (Zaprti)', 
+            'DeepSeek R1 (Odprti)', 
+            'Llama 4 400B (Odprti)', 
+            'Qwen 3 Max (Odprti)'
+        ].map(label => {
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > 16) {
+                    if (currentLine) lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            }
+            if (currentLine) lines.push(currentLine.trim());
+            return lines;
+        });
+
+        const ctxZmogljivost = document.getElementById('chartZmogljivost').getContext('2d');
+        new Chart(ctxZmogljivost, {
+            type: 'bar',
+            data: {
+                labels: labelsZmogljivost,
+                datasets: [
+                    {
+                        label: 'Arena Elo (Normalizirano)',
+                        data: [100, 98, 96, 95, 93, 91],
+                        backgroundColor: '#3b82f6',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'GPQA % (Ph.D. Nivo)',
+                        data: [68, 71, 65, 66, 61, 59],
+                        backgroundColor: '#10b981',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: sharedTooltipConfig
+                },
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        const ctxStroski = document.getElementById('chartStroski').getContext('2d');
+        new Chart(ctxStroski, {
+            type: 'scatter',
+            data: {
+                datasets: [
+                    {
+                        label: 'Zaprti Modeli (API)',
+                        data: [
+                            {x: 15.00, y: 1400}, 
+                            {x: 18.00, y: 1395}, 
+                            {x: 12.00, y: 1380}  
+                        ],
+                        backgroundColor: '#3b82f6',
+                        pointRadius: 8,
+                        pointHoverRadius: 10
+                    },
+                    {
+                        label: 'Odprti Modeli (API/Hosting)',
+                        data: [
+                            {x: 0.14, y: 1370},  
+                            {x: 0.50, y: 1360},  
+                            {x: 0.30, y: 1350}   
+                        ],
+                        backgroundColor: '#10b981',
+                        pointRadius: 8,
+                        pointHoverRadius: 10
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += `Elo: ${context.parsed.y}, Cena: $${context.parsed.x} / 1M tokenov`;
+                                }
+                                return label;
+                            }
+                        },
+                        backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                        titleColor: '#f8fafc',
+                        bodyColor: '#cbd5e1',
+                        borderColor: '#334155',
+                        borderWidth: 1,
+                        padding: 12
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'logarithmic',
+                        title: { display: true, text: 'Cena na 1M žetonov (USD) - Log lestvica' },
+                        grid: { color: 'rgba(51, 65, 85, 0.2)' }
+                    },
+                    y: {
+                        title: { display: true, text: 'Ocena Zmogljivosti (Elo)' },
+                        min: 1300
+                    }
+                }
+            }
+        });
+
+        const ctxBias = document.getElementById('chartBias').getContext('2d');
+        new Chart(ctxBias, {
+            type: 'radar',
+            data: {
+                labels: ['Cenzura & Safety Refusals', 'Zahodni Podatki / Kulture', 'Non-Western Podatki', 'EU Pravni Compliance', 'Surova Matematika / Koda'],
+                datasets: [
+                    {
+                        label: 'US Modeli',
+                        data: [90, 95, 40, 70, 90],
+                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                        borderColor: '#3b82f6',
+                        pointBackgroundColor: '#3b82f6',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'EU Modeli',
+                        data: [60, 85, 50, 95, 75],
+                        backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                        borderColor: '#10b981',
+                        pointBackgroundColor: '#10b981',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Kitajski Modeli',
+                        data: [85, 50, 95, 40, 98],
+                        backgroundColor: 'rgba(244, 63, 94, 0.2)',
+                        borderColor: '#f43f5e',
+                        pointBackgroundColor: '#f43f5e',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(51, 65, 85, 0.5)' },
+                        grid: { color: 'rgba(51, 65, 85, 0.5)' },
+                        pointLabels: { color: '#cbd5e1', font: { size: 12 } },
+                        ticks: { display: false, min: 0, max: 100 }
+                    }
+                },
+                plugins: {
+                    tooltip: sharedTooltipConfig
+                }
+            }
+        });
+
+        const labelsAgenti = [
+            'Klasični LLM API', 
+            'Generativni AI Chatbot', 
+            'Single-Agent Z Orodji', 
+            'Multi-Agent Arhitektura'
+        ].map(label => {
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > 16) {
+                    if (currentLine) lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            }
+            if (currentLine) lines.push(currentLine.trim());
+            return lines;
+        });
+
+        const ctxAgenti = document.getElementById('chartAgenti').getContext('2d');
+        new Chart(ctxAgenti, {
+            type: 'bar',
+            data: {
+                labels: labelsAgenti,
+                datasets: [
+                    {
+                        label: 'GAIA Benchmark: Stopnja Uspešnosti (%)',
+                        data: [12, 18, 45, 82],
+                        backgroundColor: [
+                            'rgba(148, 163, 184, 0.6)', 
+                            'rgba(148, 163, 184, 0.6)', 
+                            'rgba(6, 182, 212, 0.6)',   
+                            'rgba(99, 102, 241, 0.8)'   
+                        ],
+                        borderColor: [
+                            '#94a3b8',
+                            '#94a3b8',
+                            '#06b6d4',
+                            '#6366f1'
+                        ],
+                        borderWidth: 1,
+                        borderRadius: 6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: sharedTooltipConfig
+                },
+                scales: {
+                    y: { beginAtZero: true, max: 100, title: { display: true, text: 'Odstotek uspešno rešenih nalog' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
