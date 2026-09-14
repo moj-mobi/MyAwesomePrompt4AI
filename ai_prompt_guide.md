@@ -69,7 +69,7 @@ Uporabite jasne glagole dejanja in struktuirajte kompleksne naloge.
 
 **Učinkoviti glagoli:**
 - **Analitični**: analiziraj, raziskaj, oceni, primerjaj
-- **Kreativni**: ustvari, generiraj, oblikuj, napišij
+- **Kreativni**: ustvari, generiraj, oblikuj, napiši
 - **Organizacijski**: razvrsti, struktuiraj, prioritiziraj
 - **Transformacijski**: pretvori, prilagodi, optimiziraj
 
@@ -160,6 +160,8 @@ Strukturirajte prompt za optimalno berljivost.
 - `\n` za presledke
 - `---` za ločnice
 
+Za uporabo emojijev glejte [seznam emoji za markdown](emoji.md).
+
 ---
 
 ## 🔬 Napredne tehnike prompt inženiringa {#napredne-tehnike}
@@ -243,7 +245,7 @@ Ste izkušen vsebinski strateg z 10-letnimi izkušnjami v digitalnem marketingu.
 Specializirate se za B2B komunikacijo in poznate najnovše trende v content marketingu.
 
 ## 📋 NALOGA
-Ustvarite privlačen blog post nalov za tehnološko podjetje, ki se ukvarja z AI rešitvami.
+Ustvarite privlačen blog post naslov za tehnološko podjetje, ki se ukvarja z AI rešitvami.
 
 ## 🔍 SPECIFIKACIJE
 - **Dolžina**: 5-7 naslovov
@@ -279,7 +281,7 @@ Opravite celovito analizo trga za fintech startup, ki se ukvarja s kriptovalutam
 ## 🔧 DOSTOPNA ORODJA
 - Spletno iskanje in raziskovanje
 - Analiza spletnih strani konkurentov  
-- Priprapa strukturiranih poročil
+- Priprava strukturiranih poročil
 - Vizualizacija podatkov
 
 ## 📊 POSTOPEK DELA
@@ -356,7 +358,7 @@ Opravite celovito analizo trga za fintech startup, ki se ukvarja s kriptovalutam
 "Napiši 5 naslovov za blog post o AI"
 
 **Prompt B** (Test skupina):  
-"Kot izkušen copywriter ustvari 5 SEO optimiziranih naslovov za blog post o praktični uporabi AI v małych podjetjih. Vključi ključne besede in številke."
+"Kot izkušen copywriter ustvari 5 SEO optimiziranih naslovov za blog post o praktični uporabi AI v malih podjetjih. Vključi ključne besede in številke."
 
 **Metriki**:
 - Relevantnost (1-10)
